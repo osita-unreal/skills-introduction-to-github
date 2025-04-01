@@ -1,0 +1,410 @@
+import math
+
+
+print("\n")
+mythings = ["ball","laptop","bag","phone","books"]
+print( mythings[3])
+print("mythings: ", mythings)
+
+print("\n")
+for item in mythings:
+   print(item)
+
+print("\ndone\n")
+
+student= ["Emeka", "Ike", "Obinna", "Ify", "Osita", "NNenna"]
+
+variable = "Osita"
+bool = variable in student
+print(bool)
+if bool == False:
+    print(variable, " Not a member of student\n")
+else:
+    print(variable, "Is a member of student\n")
+print( "\n" ,len(student))
+
+student.append("Adanna")
+print("\n", student)
+
+
+name = "Maria"
+is_present = name in student
+if is_present == False:
+     student.append(name)
+     print("\n new list now is ", student)
+
+the_list = ["Tiger","Lion","Jaguar","Black Panther"]
+new_animal1= "Jaguar"
+new_animal2 = "Leopard"
+
+if new_animal1 in the_list:
+    print("\n", new_animal1," is   already in the list ")
+else:
+    print("\n", new_animal1, " is NOT in the list")
+    the_list.append(new_animal1)
+    print("\n ", new_animal1, " is NOW is the updated list\n")
+    print(the_list)
+
+
+
+if new_animal2 in the_list:
+    print("\n",new_animal2, " is already in the list")
+else:
+    print("\n",new_animal2," is NOT in the list")
+    the_list.append(new_animal2)
+    print("\n", new_animal2, " is Now in the Updated list")
+    print(the_list)
+
+print("\n")
+new_animal3="Bear"
+the_list.insert(5,new_animal3)
+print(the_list)
+
+# changing an item in a list
+the_list[0]="Tigress"
+print("\n The new list is now ", the_list)
+
+#using extend()
+list1 = [2,4,6,8,10]
+list2 = [1,3,5,7,9]
+list3 = [5,10,15,20]
+list1.extend(list2)
+print("\n", list1)
+
+list1.remove(10)
+print("\n The list with 10 removed>> ",list1)
+
+#lets remove all even enumbers
+# wait
+mylist = [1,2,3,4,5,6,7,8]
+for x in mylist:
+    if x%2 == 0:
+        mylist.remove(x)
+
+
+print("\n new list without even numbers:", mylist)
+
+special_numbers = [1,2,3,4,1,1,0,1,0,5,7,8,10]
+while 1 in special_numbers:
+     special_numbers.remove(1)
+     while 0 in special_numbers:
+         special_numbers.remove(0)
+         for x in special_numbers:
+             if x%2 == 0:
+               special_numbers.remove(x)
+
+print(  "\n",special_numbers)
+
+list = [0,3,5,7,9,11,13,15]
+list.pop()
+print("\n",list)
+
+list = ["messi","ronaldo","xavi","Iniesta","Modric","Neymar"]
+out1= list.pop(0)
+out2 = list.pop(0)
+print("\n", list)
+print("\n", out1," and ",out2, " were removed from the list\n")
+
+del list[3]
+print("\n", list)
+del list;
+list = ["messi","ronaldo","xavi","Iniesta","Modric","Neymar"]
+list.clear()
+print("\n", list)
+list = ["messi","ronaldo","xavi","Iniesta","Modric","Neymar"]
+print(len(list))
+print(list.count("messi"))
+hold = "Liverpool" # a string variable 
+print(hold.count("o"))
+print("\n" ,list,"\n")
+
+#finding an index
+print(list.index("messi"))
+list.sort()
+print(list)
+
+numbers = [2,3,4,0,9,11,-3,-1,8,-4]
+numbers.sort()
+print("\n",numbers)
+print("\n")
+
+import datetime as dt
+
+datelist = []
+datelist.append(dt.date(2025,10,20))
+datelist.append(dt.date(2026,10,20))
+datelist.append(dt.date(2024,10,20))
+datelist.sort()
+for x in datelist:
+     print(f"{x: %d/%m/%Y}", "\n")
+
+timelist = []
+timelist.append(dt.time(13,20,20))
+timelist.append(dt.time(20,40,30))
+timelist.append(dt.time(10,30,40))
+timelist.sort()
+for y in timelist:
+   print(f"{y: %H:%M %p}", "\n")
+
+
+print(dt.datetime.now())
+list = ["shem","ham","japhet"]
+list.reverse()
+print("\n", list)
+
+#tuple, tuples are immutable
+mytuple = (4,5,6,7,8,10)
+print(len(mytuple))
+print("\nmy tuple:", mytuple)
+
+list = [3,9]
+list2 = [4,16]
+list=list2.copy()
+print("\n",list)
+
+#set
+myset = {3, 5, 6,7}
+myset.add(9)
+myset.update([-2,0,1])
+print("\n myset: ", myset)
+
+
+diction = { 1: "Samuel", 
+           2: "Peter",
+           3: "Seyi", 
+           4: "John"
+          }
+
+print("\n dictionary : ", diction)
+print("\n", diction[2])
+print("\n", diction.pop(2))
+print("\n",diction)
+
+family = { 'first':"Lazarus", 'second':"maria",'third':"Emeka", 'fourth':"Ike",'fifth':"Obinna"}
+print("\n", family)
+print("\n 4th person in the faimly >> ", family['fourth'])
+
+
+print("\n", family.get('second'))
+print("\n", family.get('seventh'," No key named seventh exist in the family dictionary\n"))
+family['first']='Richard'
+print(family)
+family.update({'sixth':'ify'})
+print("\n",family)
+
+players = {"best striker":"Ronaldo delima", "best defender":"paulo maldini", "best footballer":"lionel messi","best midfielder":"zinadane zidane",
+           "best goalkeeper":"Manuel Nuer", "best coach":"pep guardiola","best club":"real madrid"}
+for ballers in players:
+    print("\n",players[ballers])
+
+print("\n", players['best striker'])
+
+
+
+print("\n\n")
+for men in players:
+    print(men)
+
+print("\n")
+for men in players.values():
+     print(men)
+
+print("\n")
+for x,y in players.items():
+    print(x," of all time is ", y)
+
+print("\n\n")
+var = players.items()
+print(var)
+
+var2=players.keys()
+print("\n", var2)
+
+var3= players.fromkeys(['best striker'], 'cr7')
+print("\n",var3,'\n')
+
+print(players)
+print("\n", players.setdefault('best winger','cr7'))
+print("\n",players.pop('best defender'))
+print('\n', players.popitem())
+print('\n', players)
+
+mystore = { "fruit":'apple',
+            'things':["ball","books","bicycle","bag"],
+            'money': f"${10000:,.2f}",
+            'cars': ['mercedez','bmw','venza','audi'],
+            'name': 'benson'
+         } 
+
+print("\n\n", mystore)
+print("\n")
+
+for loop in mystore:
+    print(loop)
+    if loop == 'things':
+        print( " "*5 ,mystore['things'])
+    if loop == 'cars':
+        print(" "*5, mystore['cars'])
+
+myproduct = mystore.fromkeys(['fruits','vehicles','name'])
+print("\n\n")
+print(myproduct)
+
+#nested dictionaries
+entire_list = {
+    1:{1:'esther',2:'sarah',3:'regina'},
+    2:{1:'peter',2:'james', 3:'john'},
+    3:{1:'asia',
+       2:{1:'nigeria', 2:'ghana',3:'south africa'}}
+}
+print('\n\n')
+for x in entire_list:
+    if x == 1:
+        print(" "*5,entire_list[x])
+    elif x ==2:
+        print(" "*5, entire_list[x])
+    elif x==3:
+        print(" "*8, entire_list[3])
+        for y in entire_list[3]:
+            if y== 3:
+                print(" "*10, entire_list[y])
+                for z in entire_list[3,2]:
+                    if z == 2:
+                      print(" "*12, entire_list[z])
+
+
+
+def hello():
+    print("\n you are welcome\n")
+
+hello()
+
+def hello(user_name):
+    print('\n hello ' + user_name)
+
+her_name = 'esther';
+hello(her_name)
+
+def Square(x):
+    hold = " square of " + str(x) + " is:"
+    print(hold,x*x)
+
+print('\n')
+num = 6
+Square(num)
+
+def Full_Name():
+    first = input(" what is your first name: ")
+    second = input( " what is your second name: ")
+    print('\n', ' your full name is ' + first+' '+second)
+
+Full_Name()
+
+def String_Length(x):
+    print ('\n Length of string argument '+ str(len(x)))
+
+footballer = 'ronaldinho'
+String_Length(footballer)
+
+def Profile(x,y,z):
+    print('\n Your Name is:' + x)
+    print('\n Your annual salary:',f'${y:,.2f}')
+    print('\n Your age is:' + str(z))
+
+
+name = 'philip'
+salary= 50000
+age = 30
+Profile(name,salary,age)
+
+def Dollar_Naira(x):
+    naira = 1540*x
+    print('\n In naira:', f'N{naira:,.2f}')
+
+Dollar_Naira(salary)
+
+def Co_Ordinate(x=0, y=0,z=0):
+    print("\n Location co ordinate is:", f'({str(x)}, {str(y)}, {str(z)})')
+
+Co_Ordinate(234,389,400)
+
+def Combine(x='alan',y=20, z='10/12/2010'):
+    msg = x + ' is '+str(y)+ ' times richer now and born in '+ z
+    print(msg)
+
+
+boy_name= 'samuel'
+value =30
+birth= '10/4/2008'
+Combine(boy_name,value,birth)
+
+
+print('\n\n')
+def alphabetize(original_list=[]):
+      """ Pass any list in square brackets, displays a string with items 
+      sorted """
+     # Inside the function make a working copy of the list passed in.
+      sorted_list = original_list.copy()
+     # Sort the working copy.
+      sorted_list.sort()
+     # Make a new empty string for output
+      final_list = ''
+      # Loop through sorted list and append name and comma and space.
+      for name in sorted_list:
+        final_list += name + ', '
+        # Knock off last comma space if the string is not blank
+        final_list = final_list[:-2]
+       # Print the alphabetized list.
+      print(final_list)
+
+alphabetize(['lion ','nathan ','giraffe ','tiger '])
+
+
+
+
+def alphabetize(original_list=[]):
+ """ Pass any list in square brackets, displays a string with items 
+sorted """
+ # Inside the function make a working copy of the list passed in.
+ sorted_list = original_list.copy()
+ # Sort the working copy.
+ sorted_list.sort()
+ # Make a new empty string for output
+ final_list = ''
+ # Loop through sorted list and append name and comma and space.
+ for name in sorted_list:
+  final_list += name + ', '
+ # Knock off last comma space
+ final_list = final_list[:-2]
+ # Return the alphabetized list.
+ return final_list
+
+print('\n\n')
+
+lambda anything: anything.lower()
+
+men = ['Sam', 'haskell','Lydia', 'felix']
+men.sort(key=lambda anything : anything.lower())
+print(men)
+print('\n')
+
+currency = lambda n: f"{n:,.2f}"
+percent = lambda n: f"{n:.2%}"
+print(currency(99000))
+print('\n',percent(.065))
+
+
+hold = "Liver"
+print(hold.rjust(10))
+print('\n', hold.ljust(5))
+
+lambda str1,str2: str1.lower() + str2.upper()
+hold2 ='Kidney'
+
+output = lambda hold,hold2:hold.lower() +  hold2.upper()
+
+
+
+
+
+print("\n\n")
